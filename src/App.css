@@ -8,6 +8,55 @@
   text-align: center;
 }
 
+.kontakt-form {
+  display: grid;
+  gap: 16px;
+  max-width: 640px;
+  margin: 0 auto 32px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--social-bg);
+  box-shadow: var(--shadow);
+}
+
+.kontakt-form label {
+  display: grid;
+  gap: 8px;
+  color: var(--text-h);
+  font-weight: 500;
+}
+
+.kontakt-form input {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text-h);
+  font: inherit;
+}
+
+.kontakt-form input:focus {
+  outline: 2px solid var(--border);
+  outline-offset: 1px;
+}
+
+.kontakt-form button {
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text-h);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.kontakt-form button:hover {
+  box-shadow: var(--shadow);
+}
+
 .kontaktliste-grid {
   display: grid;
   gap: 16px;
