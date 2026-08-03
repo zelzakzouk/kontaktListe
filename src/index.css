@@ -1,81 +1,81 @@
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+:root { /* Globale CSS-Variablen und Basis-Styles für die gesamte App */
+  --text: #6b6375; /* Farbe für normalen Fließtext */
+  --text-h: #08060d; /* Farbe für Überschriften und hervorgehobenen Text */
+  --bg: #fff; /* Hintergrundfarbe der App im Light Mode */
+  --border: #e5e4e7; /* Farbe für Rahmen und Trennlinien */
+  --social-bg: rgba(244, 243, 236, 0.5); /* Halbtransparenter Hintergrund für Karten */
+  --shadow: /* Mehrschichtiger Schatten für Karten und Buttons */
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px; /* Schattenwerte für Tiefe */
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif; /* Schriftart für Fließtext */
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif; /* Schriftart für Überschriften */
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font: 18px/145% var(--sans); /* Standard-Schriftgröße, Zeilenhöhe und Schriftfamilie */
+  letter-spacing: 0.18px; /* Leichter Buchstabenabstand für bessere Lesbarkeit */
+  color-scheme: light dark; /* Browser-Hinweis für helle und dunkle Darstellung */
+  color: var(--text); /* Standard-Textfarbe setzen */
+  background: var(--bg); /* Standard-Hintergrundfarbe setzen */
+  font-synthesis: none; /* Verhindert künstliche Fettschrift/Kursivschrift */
+  text-rendering: optimizeLegibility; /* Optimiert Textdarstellung für Lesbarkeit */
+  -webkit-font-smoothing: antialiased; /* Glättet Schrift in WebKit-Browsern */
+  -moz-osx-font-smoothing: grayscale; /* Glättet Schrift in Firefox auf macOS */
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
-}
+  @media (max-width: 1024px) { /* Anpassungen für kleinere Bildschirme */
+    font-size: 16px; /* Kleinere Standardschrift auf mobilen Geräten */
+  } /* Ende der Root-Media-Query */
+} /* Ende von :root */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-}
+@media (prefers-color-scheme: dark) { /* Styles, wenn der Nutzer Dark Mode bevorzugt */
+  :root { /* Überschreibt die Light-Mode-Variablen */
+    --text: #9ca3af; /* Hellgrauer Text für Dark Mode */
+    --text-h: #f3f4f6; /* Sehr heller Text für Überschriften im Dark Mode */
+    --bg: #16171d; /* Dunkler Seitenhintergrund */
+    --border: #2e303a; /* Dunklere Rahmenfarbe */
+    --social-bg: rgba(47, 48, 58, 0.5); /* Dunklerer Kartenhintergrund */
+    --shadow: /* Stärkerer Schatten für Dark Mode */
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px; /* Schattenwerte für Dark Mode */
+  } /* Ende der Dark-Mode-Root-Variablen */
+} /* Ende der Dark-Mode-Media-Query */
 
-body {
-  margin: 0;
-}
+body { /* Styles für das HTML-body-Element */
+  margin: 0; /* Entfernt den Standard-Browser-Rand */
+} /* Ende von body */
 
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  box-sizing: border-box;
-}
+#root { /* Container für die React-App */
+  width: 1126px; /* Maximale Inhaltsbreite auf großen Bildschirmen */
+  max-width: 100%; /* Verhindert horizontales Überlaufen auf kleinen Screens */
+  margin: 0 auto; /* Zentriert den App-Container horizontal */
+  border-inline: 1px solid var(--border); /* Linke und rechte Rahmenlinie */
+  min-height: 100svh; /* Mindesthöhe = volle sichtbare Viewport-Höhe */
+  box-sizing: border-box; /* Padding und Border in die Breite einrechnen */
+} /* Ende von #root */
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
+h1, /* Gemeinsame Styles für h1 und h2 */
+h2 { /* Überschriften der zweiten Ebene */
+  font-family: var(--heading); /* Überschrift-Schriftart verwenden */
+  font-weight: 500; /* Mittlere Schriftstärke für Überschriften */
+  color: var(--text-h); /* Hervorgehobene Textfarbe für Überschriften */
+} /* Ende der gemeinsamen Überschriften-Styles */
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
+h1 { /* Spezifische Styles für Hauptüberschriften */
+  font-size: 56px; /* Große Schriftgröße für h1 */
+  letter-spacing: -1.68px; /* Engeres Letter-Spacing für große Überschrift */
 
-  @media (max-width: 1024px) {
-    font-size: 36px;
-  }
-}
+  @media (max-width: 1024px) { /* Responsive Anpassung für h1 */
+    font-size: 36px; /* Kleinere h1 auf schmalen Bildschirmen */
+  } /* Ende der h1-Media-Query */
+} /* Ende von h1 */
 
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
+h2 { /* Spezifische Styles für Unterüberschriften */
+  font-size: 24px; /* Standardgröße für h2 */
+  line-height: 118%; /* Kompakte Zeilenhöhe für h2 */
+  letter-spacing: -0.24px; /* Leicht engeres Letter-Spacing */
 
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
+  @media (max-width: 1024px) { /* Responsive Anpassung für h2 */
+    font-size: 20px; /* Kleinere h2 auf schmalen Bildschirmen */
+  } /* Ende der h2-Media-Query */
+} /* Ende von h2 */
 
-p {
-  margin: 0;
-}
+p { /* Styles für Absätze */
+  margin: 0; /* Entfernt Standard-Abstand zwischen Absätzen */
+} /* Ende von p */

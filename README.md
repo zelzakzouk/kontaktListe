@@ -1,16 +1,67 @@
-# React + Vite
+# Kontaktliste
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Eine einfache React-Anwendung zur Darstellung und Verwaltung einer Kontaktliste.
 
-Currently, two official plugins are available:
+## Funktionalität
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Die App zeigt eine Liste von Kontakten an. Jeder Kontakt enthält **Name**, **E-Mail** und **Telefonnummer** und wird als eigene Karte dargestellt.
 
-## React Compiler
+Zusätzlich kann über ein Formular ein neuer Kontakt hinzugefügt werden. Nach dem Absenden erscheint der neue Eintrag sofort in der Liste und die Eingabefelder werden geleert. Leere Felder und doppelte E-Mail-Adressen werden abgelehnt.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Umgesetzte Anforderungen
 
-## Expanding the Oxlint configuration
+### Basis-Aufgabe
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Zwei Hauptkomponenten: `Kontaktliste` und `Kontakt`
+- Die `Kontakt`-Komponente akzeptiert die Props `name`, `email` und `telefon`
+- Kontaktdaten werden in ansprechender Form dargestellt
+- Die `Kontaktliste` rendert mehrere `Kontakt`-Komponenten
+- Das Kontakt-Array ist innerhalb der `Kontaktliste`-Komponente definiert
+- Daten werden per Props von der Liste an jede Kontakt-Komponente übergeben
+
+### Erweiterung
+
+- Formular zum Hinzufügen neuer Kontakte
+- Button **Kontakt hinzufügen** zum Speichern neuer Einträge
+- Verwaltung der Kontakte mit React `useState`
+- Validierung: keine leeren Felder, keine doppelten E-Mail-Adressen
+
+## Technologien
+
+| Bereich | Tool / Framework |
+|---|---|
+| UI-Bibliothek | [React](https://react.dev/) 19 |
+| Build-Tool | [Vite](https://vite.dev/) 8 |
+| React-Plugin | [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react) |
+| Linter | [Oxlint](https://oxc.rs/) |
+| Sprache | JavaScript (JSX) |
+| Styling | CSS (global in `index.css`, komponentenbezogen in `App.css`) |
+
+## Projektstruktur
+
+```
+src/
+├── App.jsx          # Root-Komponente
+├── Kontakt.jsx      # Einzelne Kontaktkarte
+├── Kontaktliste.jsx # Liste + Formular zum Hinzufügen
+├── main.jsx         # Einstiegspunkt der App
+├── App.css          # Styles für Liste, Formular und Karten
+└── index.css        # Globale Basis-Styles
+```
+
+## Installation und Start
+
+```bash
+npm install
+npm run dev
+```
+
+Die App ist danach unter `http://localhost:5173/` erreichbar.
+
+### Weitere Befehle
+
+```bash
+npm run build    # Production-Build erstellen
+npm run preview  # Production-Build lokal testen
+npm run lint     # Code mit Oxlint prüfen
+```

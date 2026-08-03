@@ -1,100 +1,100 @@
-.kontaktliste {
-  padding: 48px 32px;
-  text-align: left;
-}
+.kontaktliste { /* Äußerer Container der gesamten Kontaktlisten-Sektion */
+  padding: 48px 32px; /* Innenabstand oben/unten und links/rechts */
+  text-align: left; /* Text linksbündig ausrichten */
+} /* Ende von .kontaktliste */
 
-.kontaktliste h1 {
-  margin: 0 0 32px;
-  text-align: center;
-}
+.kontaktliste h1 { /* Hauptüberschrift innerhalb der Kontaktliste */
+  margin: 0 0 32px; /* Kein oberer Rand, 32px Abstand nach unten */
+  text-align: center; /* Überschrift zentrieren */
+} /* Ende von .kontaktliste h1 */
 
-.kontakt-form {
-  display: grid;
-  gap: 16px;
-  max-width: 640px;
-  margin: 0 auto 32px;
-  padding: 24px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--social-bg);
-  box-shadow: var(--shadow);
-}
+.kontakt-form { /* Formular zum Hinzufügen neuer Kontakte */
+  display: grid; /* Formularfelder untereinander anordnen */
+  gap: 16px; /* Abstand zwischen den Formularzeilen */
+  max-width: 640px; /* Maximale Breite des Formulars */
+  margin: 0 auto 32px; /* Horizontal zentrieren, 32px Abstand nach unten */
+  padding: 24px; /* Innenabstand im Formular */
+  border: 1px solid var(--border); /* Rahmen um das Formular */
+  border-radius: 12px; /* Abgerundete Ecken */
+  background: var(--social-bg); /* Heller Kartenhintergrund */
+  box-shadow: var(--shadow); /* Leichter Schatten für Tiefe */
+} /* Ende von .kontakt-form */
 
-.kontakt-form label {
-  display: grid;
-  gap: 8px;
-  color: var(--text-h);
-  font-weight: 500;
-}
+.kontakt-form label { /* Beschriftung + Eingabefeld als Gruppe */
+  display: grid; /* Label-Text über dem Input platzieren */
+  gap: 8px; /* Abstand zwischen Label und Input */
+  color: var(--text-h); /* Hervorgehobene Textfarbe für Labels */
+  font-weight: 500; /* Etwas fettere Schrift für Labels */
+} /* Ende von .kontakt-form label */
 
-.kontakt-form input {
-  padding: 10px 12px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--bg);
-  color: var(--text-h);
-  font: inherit;
-}
+.kontakt-form input { /* Eingabefelder im Formular */
+  padding: 10px 12px; /* Innenabstand im Input */
+  border: 1px solid var(--border); /* Rahmen um das Eingabefeld */
+  border-radius: 8px; /* Leicht abgerundete Input-Ecken */
+  background: var(--bg); /* Hintergrundfarbe des Inputs */
+  color: var(--text-h); /* Textfarbe im Input */
+  font: inherit; /* Schrift von der App übernehmen */
+} /* Ende von .kontakt-form input */
 
-.kontakt-form input:focus {
-  outline: 2px solid var(--border);
-  outline-offset: 1px;
-}
+.kontakt-form input:focus { /* Stil, wenn ein Input fokussiert ist */
+  outline: 2px solid var(--border); /* Sichtbarer Fokusrahmen */
+  outline-offset: 1px; /* Kleiner Abstand zwischen Input und Fokusrahmen */
+} /* Ende von .kontakt-form input:focus */
 
-.kontakt-form button {
-  padding: 12px 16px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--bg);
-  color: var(--text-h);
-  font: inherit;
-  font-weight: 500;
-  cursor: pointer;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
+.kontakt-form button { /* Submit-Button zum Hinzufügen eines Kontakts */
+  padding: 12px 16px; /* Innenabstand im Button */
+  border: 1px solid var(--border); /* Rahmen um den Button */
+  border-radius: 8px; /* Abgerundete Button-Ecken */
+  background: var(--bg); /* Button-Hintergrundfarbe */
+  color: var(--text-h); /* Button-Textfarbe */
+  font: inherit; /* Schrift von der App übernehmen */
+  font-weight: 500; /* Etwas fetterer Button-Text */
+  cursor: pointer; /* Zeigt Hand-Cursor beim Hover */
+  transition: border-color 0.2s, box-shadow 0.2s; /* Weiche Hover-Animation */
+} /* Ende von .kontakt-form button */
 
-.kontakt-form button:hover {
-  box-shadow: var(--shadow);
-}
+.kontakt-form button:hover { /* Stil, wenn der Mauszeiger über dem Button ist */
+  box-shadow: var(--shadow); /* Schatten beim Hover für Feedback */
+} /* Ende von .kontakt-form button:hover */
 
-.kontaktliste-grid {
-  display: grid;
-  gap: 16px;
-  max-width: 640px;
-  margin: 0 auto;
-}
+.kontaktliste-grid { /* Grid-Container für alle Kontaktkarten */
+  display: grid; /* Kontakte untereinander anordnen */
+  gap: 16px; /* Abstand zwischen den Kontaktkarten */
+  max-width: 640px; /* Gleiche maximale Breite wie das Formular */
+  margin: 0 auto; /* Liste horizontal zentrieren */
+} /* Ende von .kontaktliste-grid */
 
-.kontakt {
-  padding: 20px 24px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--social-bg);
-  box-shadow: var(--shadow);
-}
+.kontakt { /* Einzelne Kontaktkarte */
+  padding: 20px 24px; /* Innenabstand in der Karte */
+  border: 1px solid var(--border); /* Rahmen um die Karte */
+  border-radius: 12px; /* Abgerundete Kartenecken */
+  background: var(--social-bg); /* Heller Kartenhintergrund */
+  box-shadow: var(--shadow); /* Schatten für visuelle Tiefe */
+} /* Ende von .kontakt */
 
-.kontakt-name {
-  margin: 0 0 12px;
-  font-size: 22px;
-}
+.kontakt-name { /* Name innerhalb einer Kontaktkarte */
+  margin: 0 0 12px; /* Kein oberer Rand, 12px Abstand nach unten */
+  font-size: 22px; /* Größere Schrift für den Namen */
+} /* Ende von .kontakt-name */
 
-.kontakt-email,
-.kontakt-telefon {
-  margin: 0 0 8px;
-}
+.kontakt-email, /* E-Mail-Zeile in der Kontaktkarte */
+.kontakt-telefon { /* Telefon-Zeile in der Kontaktkarte */
+  margin: 0 0 8px; /* Abstand nach unten zwischen den Zeilen */
+} /* Ende von .kontakt-email und .kontakt-telefon */
 
-.kontakt-email:last-child,
-.kontakt-telefon:last-child {
-  margin-bottom: 0;
-}
+.kontakt-email:last-child, /* Letzte E-Mail-Zeile, falls sie das letzte Element ist */
+.kontakt-telefon:last-child { /* Letzte Telefon-Zeile, falls sie das letzte Element ist */
+  margin-bottom: 0; /* Kein zusätzlicher Abstand am Ende der Karte */
+} /* Ende der :last-child-Regel */
 
-.kontakt-email span,
-.kontakt-telefon span {
-  color: var(--text-h);
-  font-weight: 500;
-}
+.kontakt-email span, /* Label "E-Mail:" in der Karte */
+.kontakt-telefon span { /* Label "Telefon:" in der Karte */
+  color: var(--text-h); /* Hervorgehobene Farbe für die Labels */
+  font-weight: 500; /* Etwas fettere Schrift für die Labels */
+} /* Ende der span-Labels */
 
-@media (max-width: 1024px) {
-  .kontaktliste {
-    padding: 32px 20px;
-  }
-}
+@media (max-width: 1024px) { /* Responsive Anpassungen für kleinere Bildschirme */
+  .kontaktliste { /* Kontaktliste auf Mobile/Tablet */
+    padding: 32px 20px; /* Kleinerer Innenabstand auf schmalen Screens */
+  } /* Ende der mobilen .kontaktliste-Regel */
+} /* Ende der Media-Query */
